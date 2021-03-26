@@ -1,6 +1,14 @@
 const Total = (props) => {
+    let sumaexercises=0;
     return(
-        <p>Number of exercises {props.exercises1 + props.exercises2 + props.exercises3}</p>
+        <div>
+        {
+            props.parts.map((partes, index) => {
+                sumaexercises+=partes.exercises
+        })
+    }
+    <p>Number of exercises {sumaexercises}</p>
+    </div>
     )
 }
 
